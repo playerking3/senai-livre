@@ -1,0 +1,242 @@
+:root{
+    --principal: #fff159;
+    --ofertas: #3682fd;
+    --valor: #2ca469;
+    --valor-parc: #4db68a;
+    --textos: #383838;  
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: all 1s;
+}
+
+header{
+    background-color: var(--principal)
+}
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.principal img{
+    width: 150px;
+    padding: 7px;
+}
+
+.container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 250px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+  }
+
+  .hamburguer svg{
+    width: 20px;
+  }
+
+.categorias{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a{
+    text-decoration: none;
+    color: var(--textos);
+    margin: 6px;
+}
+.geral, .confiragrid{
+    display: grid;
+    grid-template-columns: repeat( 7,1fr);
+}
+
+.geral div, .confiragrid div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+hr{
+    border: solid var(--textos) 1px;
+}
+
+.ofertas, .confira, .promocao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ofertasgrid, .promogrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.ofertasgrid div, .promogrid div{
+    padding: 5px;
+    border: outset  2px;
+    border-image: linear-gradient(to padding-bottom, var(--textos), rgba(0, 0, 0, 0)) 1 100%;
+    border-radius: 20px 1px;
+}
+
+.ofertas h3, .promocao h3{
+    text-align: center;
+}
+
+.ofertas h2, .promocao h2{
+    padding: 15px;
+}
+.oferta{
+    background-color: var(--ofertas);
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px 10px 10px 1px;
+
+}
+
+.frete{
+    color: var(--valor);
+}
+
+.confira{
+
+    background-color: var(--principal);
+}
+
+.promocao img{
+    width: 192px;
+}
+
+.ver{
+    margin: 12px;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    text-align: center;
+    border: none;
+    clip-path: polygon(7% 0, 93% 0, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+    background-color: #000000;
+    background-image: radial-gradient(200% 70% at center 20%, rgba(48,44,45,1) -30%, rgba(50,46,47,1) 49%, rgba(22,18,19,1) 50%, rgba(22,18,19,1) 150%);
+    background-repeat: no-repeat;
+    transition: background-position-y ease-in-out 250ms;
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    background-color: var(--principal);
+}
+
+.esquerda{
+    background-image: url(../img/rodape.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.esquerda p {
+    padding: 20px;
+}
+
+.direita{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.um, .dois{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principal a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--textos);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--textos);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--textos);
+}
+
+.principal a:hover {
+    color: var(--textos);
+    box-shadow: inset 0 -100px 0 0 var(--principal);
+}
+
+.principal a:active {
+    transform: scale(0.9);
+    }
+    
+.geral img,
+.confiragrid {
+    cursor: pointer;
+    
+}
+    
+.geral img:hover,
+.confiragrid img:hover,
+.geral svg {
+    box-shadow: inset 0 -100px 0 0 var(--textos);
+    border-radius: 500px;
+}
+
+.ofertas {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
+    padding-bottom: 60px;
+
+}
+
+.confira {
+    clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+    padding-top: 60px;
+}
+
