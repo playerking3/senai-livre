@@ -558,3 +558,7 @@ ul{
     margin-bottom: 5px !important;
 }
 
+.placesholder input{
+    font-size: small !important;
+}
+
