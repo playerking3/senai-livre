@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Cadastro de usuário</title>
+</head>
+<body id="cadastro">
+    <header>
+        <div class="principal">
+            <img src="../img/senai.png" alt="Logo SENAI livre">
+            <nav>
+                <a href="">Contato</a>
+                <a href="index.html"><i class="fa-solid fa-share"></i>Voltar</a>   
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="cadastrogeral">
+            <h2>Cadastro de usuário</h2>
+            <div class="form">
+                <form action="POST">
+                    <div class="cgrid">
+                        <div>
+                            <div class="partes">
+                                <label for="Nome" class="label">Nome</label>
+                                <input type="text" name="nome" id="nome" required placeholder="Nome" class="input">
+                            </div>
+                            <div class="partes">
+                                <label for="Sobrenome" class="label">Sobrenome</label>
+                                <input type="text" name="Sobrenome" id="Sobrenome" placeholder="Sobrenome" required class="input">
+                            </div>
+                            <div class="partes">
+                                <label for="Email" class="label">E-mail</label>
+                                <input type="email" name="Email" id="Email" placeholder="E-mail" required minlength="4" maxlength="255" class="input">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="partes">
+                                <label for="Confirmar E-mail" class="label">Confirmar E-mail</label>
+                                <input type="email" name="Confirmar" id="Confirmar" placeholder="Confirmar E-mail" required minlength="4" maxlength="255" class="input">
+                            </div>
+                            <div class="partes">
+                                <label for="Senha" class="label">Senha</label>
+                                <input type="password" name="Senha" id="Senha" placeholder="Senha" required minlength="8" maxlength="255" class="input">
+                            </div>
+                            <div class="partes">
+                                <label for="Confirmar senha" class="label">Confirmar senha</label>
+                                <input type="password" name="Csenha" id="Csenha" placeholder="Confirmar senha" required minlength="8" maxlength="255" class="input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class="captcha">
+                            <!-- <input type="checkbox" name="captcha" id="captcha" required>
+                            <label for="CAPTCHA">Não sou um robô</label>                           -->
+                            <label class="container">
+                                <input type="checkbox">
+                                <div class="checkmark"></div>
+                              </label>
+                              <p>Não sou um robô</p>
+                        </div>
+
+                        <div class="termos">
+                            <label class="container">
+                                <input type="checkbox">
+                                <div class="checkmark"></div>
+                              </label>
+                              <p>Aceito os <a href="">Termos e condições</a></p>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <button type="submit" class="btn btn-outline-warning">Confirmar cadastro</button>
+                    </div>
+                </form>
+            </div>
+            <div class="opcoes">
+                <div class="google">
+                    <button><a href=""><i class="fa-brands fa-google"></i> Entrar com o Google</a></button>
+                </div>
+                <div class="facebook">
+                    <button><a href=""><i class="fa-brands fa-facebook"></i> Entrar com o Facebook</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/9879f90344.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
