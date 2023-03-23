@@ -1,0 +1,564 @@
+:root{
+    --principal: #fff159;
+    --ofertas: #3682fd;
+    --valor: #2ca469;
+    --valor-parc: #4db68a;
+    --textos: #383838;  
+    --red: red;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.5s;
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+}
+
+
+
+header{
+    background-color: var(--principal)
+}
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.principal img{
+    width: 150px;
+    padding: 7px;
+}
+
+.container-input {
+    position: relative;
+  }
+  
+  .imput {
+    width: 300px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .imput:focus {
+    opacity: 1;
+  }
+
+  .hamburguer svg{
+    width: 20px;
+  }
+
+.categorias{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a{
+    text-decoration: none;
+    color: var(--textos);
+    margin: 6px;
+}
+.geral, .confiragrid{
+    display: grid;
+    grid-template-columns: repeat( 7,1fr);
+}
+
+.geral div, .confiragrid div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+hr{
+    border: solid var(--textos) 1px;
+}
+
+.ofertas, .confira, .promocao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ofertasgrid, .promogrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    
+}
+
+.ofertasgrid div, .promogrid div{
+    padding: 5px;
+    border: outset  2px;
+    border-color: #00000060;
+    border-radius: 20px 1px;
+    background-color: white;
+}
+
+.ofertas h3, .promocao h3{
+    text-align: center;
+}
+
+.ofertasgrid div:hover, .promogrid div:hover{
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ofertas h2, .promocao h2{
+    padding: 15px;
+}
+.oferta{
+    background-color: var(--ofertas);
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px 10px 10px 1px;
+
+}
+
+.frete{
+    color: var(--valor);
+}
+
+.confira{
+
+    background-color: var(--principal);
+}
+
+.promocao img{
+    width: 192px;
+}
+
+.ver{
+    margin: 12px;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    text-align: center;
+    border: none;
+    clip-path: polygon(7% 0, 93% 0, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+    background-color: #000000;
+    background-image: radial-gradient(200% 70% at center 20%, rgba(48,44,45,1) -30%, rgba(50,46,47,1) 49%, rgba(22,18,19,1) 50%, rgba(22,18,19,1) 150%);
+    background-repeat: no-repeat;
+    transition: background-position-y ease-in-out 250ms;
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    background-color: var(--principal);
+}
+
+.esquerda{
+    background-image: url(../img/rodape.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.esquerda p {
+    padding: 20px;
+}
+
+.direita{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.um, .dois{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principal a, .compra{
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--textos);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--textos);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--textos);
+}
+
+.principal a:hover , .compra:hover{
+    color: var(--textos);
+    box-shadow: inset 0 -100px 0 0 var(--principal);
+}
+
+.principal a:active, .compra:active {
+    transform: scale(0.9);
+    }
+    
+
+    
+.geral img:hover,
+.confiragrid img:hover,
+.geral svg {
+    box-shadow: inset 0 -100px 0 0 var(--textos);
+    border-radius: 500px;
+}
+
+.ofertas {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
+    padding-bottom: 60px;
+
+}
+
+.confira {
+    clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+    padding-top: 60px;
+}
+
+/* coisas especificas da pagina de cadastro ------------------------------------------------------ */
+
+#cadastro {
+    background-color: #dadada57;
+}
+
+#cadastro .principal {
+    justify-content: space-between !important;
+
+}
+
+#cadastro header h1{
+    text-transform: uppercase;
+}
+
+#cadastro header img{
+    width: 100px;
+}
+
+.cadastrogeral{
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: max-content;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.main{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    max-width: 190px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+  
+.label {
+    display: block;
+    margin: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: var(--textos);
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+  
+.input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+}
+  
+.input-group:hover .label, .input:focus {
+    color: #05060fc2;
+}
+
+.partes{
+    margin: 12px;
+}
+
+.termos a{
+    text-decoration:underline;
+}
+
+/* Hide the default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+   }
+   
+   .container {
+    margin: 15px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    width: fit-content;
+   }
+   
+   /* Create a custom checkbox */
+   .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #ccc;
+    transition: all 0.3s;
+    border-radius: 5px;
+   }
+   
+   /* When the checkbox is checked, add a blue background */
+   .container input:checked ~ .checkmark {
+    background-color: #47da99;
+    animation: pop 0.5s;
+    animation-direction: alternate;
+   }
+   
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+   }
+   
+   /* Show the checkmark when checked */
+   .container input:checked ~ .checkmark:after {
+    display: block;
+   }
+   
+   /* Style the checkmark/indicator */
+   .container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+   }
+   
+   @keyframes pop {
+    0% {
+     transform: scale(1);
+    }
+   
+    50% {
+     transform: scale(0.9);
+    }
+   
+    100% {
+     transform: scale(1);
+    }
+   }
+
+.captcha, .termos{
+    display: flex;
+    align-items: center;
+    
+}
+
+.boxes p{
+    font-size: small;
+    margin-bottom: 0 !important;
+    
+}
+
+.cgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.boxes, .botao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.btn.btn-outline-warning{
+    color: var(--textos);
+    margin: 18px;
+}
+
+.btn.btn-outline-warning:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.opcoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 30px;
+}
+
+.google button, .facebook button{
+    padding: 8px;
+    border: solid 1px black;;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.google button:hover, .facebook button:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.google button{
+    background-color: white;
+}
+
+.facebook button{
+    background-color: #3b5998;
+    color: white;
+}
+
+.facebook button a{
+    color: white !important;
+}
+
+/* Página de produto induividual ---------------------------------------------------------------------------*/
+
+.objeto{
+    margin-top: 30px;
+}
+
+.pgrid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 5fr 3fr 3fr;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fotinhas{
+    border-right: solid 2px gray;
+}
+
+.fotinhas img{
+    margin: 20px 5px 0px 15px;
+    width: 60px;
+    border: solid 3px rgb(137, 137, 137);
+    border-radius: 6px;
+}
+
+.fotinhas img:hover{
+    border: solid 3px rgb(110, 110, 255);
+}
+
+.estrelas{
+    color: var(--ofertas);
+}
+
+.comprar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comprar{
+    border-left: solid 2px gray;
+}
+
+
+.imagem{
+    margin: 22px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: calc(100% - 50px);
+    height: 400px;
+}
+
+.info{
+    padding: 12px;
+}
+
+.estrelas, .oproduto{
+    font-size: medium;
+}
+
+.bigpreco{
+    font-size: 60px;
+    color: var(--valor);
+    margin-bottom: 0px !important;
+}
+
+.btn.btn-outline-warning.compra{
+    margin: 6px;
+}
+
+ul{
+    color: gray;
+}
+
+.poutros{
+    padding: 0px 12px 0px 12px;
+    background-color: #0000001f;
+}
+
+.poutros h2{
+    font-size:xx-large;
+}
+
+.poutros h3{
+    font-size: large;
+}
+
+.poutros h4, .poutros h5{
+    font-size: medium;
+}
+
+.poutros h4{
+
+    margin-bottom: 5px !important;
+}
+
+.placesholder input{
+    font-size: small !important;
+}
+

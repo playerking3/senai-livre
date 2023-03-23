@@ -1,0 +1,28 @@
+CREATE TABLE fornecedores(
+    id int NOT null PRIMARY KEY AUTO_INCREMENT,
+    nome text,
+    razao_social text,
+    cnpj int,
+    cpf int,
+    email text,
+    contato text,
+    idUsuario int,
+    FOREIGN KEY(idUsuario) REFERENCES usuario(id)
+);
+
+INSERT INTO fornecedores(cnpj, contato, cpf, email, idUsuario, nome, razao_social) VALUES ("123", "123", "00000", "marcelo@gmail.com", "1", "marcelo", "marcelos");
+
+SELECT f.*
+FROM fornecedores f
+(esse f é para apelidar a tablela)
+
+SELECT f.*, u.nome, u.login
+FROM fornecedores f
+JOIN usuario u on u.id = f.idUsuario
+(join conecta as duas tabelas)
+
+
+SELECT p.*, f.nome, f.razao_social, u.nome, u.login
+FROM produto p
+JOIN fornecedores f on f.id = p.idForn
+JOIN usuario u on u.id = f.idUsuario
