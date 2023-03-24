@@ -22,6 +22,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+*::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+*::-webkit-scrollbar-track {
+    background: #fff;        /* color of the tracking area */
+    border-radius: 12px;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: var(--lightcinza);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #fff;  /* creates padding around scroll thumb */
+}
+
 .grid{
     display: grid;
     grid-template-columns: 2fr 10fr;
@@ -63,12 +78,19 @@
 .sidebar a{
     text-decoration: none;
     padding-top: 7px;
+    color: var(--cinza);
+}
+
+.sidebar a:hover{
     color: var(--lightcinza);
 }
 
 /* cabeçalho--------------------------------------------------------------------------- */
 
 .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 20px;
     box-shadow: 0px 10px 30px rgba(82, 63, 105, 0.05);
 }
@@ -79,13 +101,17 @@
     margin: 6px;
 }
 
-.azul{
+.header a:hover{
     padding: 8px;
     background-color: var(--lightazul);
     color: var(--azul);
     border-radius: 8px;
+    text-align: center;
+    transition: all 0.5s;
 }
 
+/* página de pesquisa que eu peguei da net */
+  
 /* painel de controle --------------------------------------------------------------------------- */
 
 .controle{
@@ -118,9 +144,10 @@
     color: var(--cinza);
 }
 
-.vendas{
-    background-image: var(--degrade);
+.frame1:hover{
     filter: drop-shadow(10px 11px 15px rgba(76, 87, 125, 0.15));
+    background-image: var(--degrade);
+    transition: all 0.5s;
 }
 
 .vendas h3{
@@ -177,14 +204,25 @@
     border-bottom: solid 2px var(--azul) ;
 }
 
+.tabeladiv{
+    max-height: 253px;
+    overflow: auto;
+}
+
 .tabela1{
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    
 }
 
+td{
+    color: var(--cinza);
+    font-size: small;
+}
 .tabela1 th{
     color: var(--cinza);
+    margin: 5px;
 }
 
 .tabela1 tr{
@@ -213,7 +251,7 @@
     margin: 22px;
 }
 
-.btnazul{
+.btn2:hover{
     padding: 8px;
     background-color: var(--azul);
     border: none;
@@ -221,6 +259,7 @@
     color: white;
     margin: 8px;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .btn2{
@@ -230,4 +269,129 @@
     border-radius: 12px;
     color: var(--cinza);
     cursor: pointer;
+    margin: 8px;
+}
+
+/* seção grande 2--------------------------------------------------------------------- */
+
+.bigbox2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 22px;
+    margin: 22px;
+}
+
+/* pedidos ----------------------------------------------------------------------------- */
+
+.pedidos{
+    background-color: white;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0px 10px 30px rgba(82, 63, 105, 0.05);
+}
+
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
+}
+
+.titulo span{
+    color: var(--cinza);
+}
+
+.blocos{
+    /* abaixo ó como colocar scroll */
+    justify-content: center;
+    max-height: 253px;
+    overflow: auto;
+}
+
+.bloco{
+    margin: 18px;
+    border: dashed 1px var(--lightcinza);
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+
+
+.bloco div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+}
+
+.bloco button{
+    border: none;
+    padding: 4px;
+    background-color: #5c5c5c20; 
+    border-radius: 3px;
+}
+
+.pago{
+    font-size: small;
+    padding: 5px;
+    background-color: var(--lightverde);
+    color: var(--verde);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.processando{
+    font-size: small;
+    padding: 5px;
+    background-color: var(--lightamarelo);
+    color: var(--amarelo);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cancelado{
+    font-size: small;
+    padding: 5px;
+    background-color: var(--lightvermelho);
+    color: var(--vermelho);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.to{
+    color: var(--cinza);
+}
+
+/* tabela de vendas -------------------------------------------------------------------------------- */
+
+.tabelavendas{
+    background-color: white;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.nome{
+    color: black !important;
+}
+
+.azul{
+    padding: 5px;
+    background-color: var(--lightazul);
+    color: var(--azul);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+/* footer ------------------------------------------------------------------------------------------*/
+
+footer {
+    padding: 12px;
+}
+
+footer p{
+    font-size: small;
+    color: var(--cinza);
 }
