@@ -13,6 +13,7 @@
     --lightcinza: #B5B5C3;
     --cinza: #7E8299;
     --darkcinza: #3F4254;
+    --darkverde: #2F7210;
 }
 
 *{
@@ -26,6 +27,19 @@
     grid-template-columns: 2fr 10fr;
     width: 100%;
     height: 100%;
+}
+
+.principal{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.main{
+    display: grid;
+    grid-template-rows: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: var(--background);
 }
 /* Barra lateral ---------------------------------------------------------- */
 
@@ -51,3 +65,107 @@
     padding-top: 7px;
     color: var(--lightcinza);
 }
+
+/* cabeçalho--------------------------------------------------------------------------- */
+
+.header{
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(82, 63, 105, 0.05);
+}
+
+.header a{
+    text-decoration: none;
+    font-weight: bold;
+    margin: 6px;
+}
+
+.azul{
+    padding: 8px;
+    background-color: var(--lightazul);
+    color: var(--azul);
+    border-radius: 8px;
+}
+
+/* painel de controle --------------------------------------------------------------------------- */
+
+.controle{
+    display: grid;
+    grid-template-rows: auto;
+    margin: 28px;
+}
+
+.textos{
+    padding: 12px;
+}
+
+.controlegrid{
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    gap: 12px;
+}
+
+.frame1{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(82, 63, 105, 0.05);
+}
+
+.frame1 p, .frame1 i{
+    color: var(--cinza);
+}
+
+.vendas{
+    background-image: var(--degrade);
+    filter: drop-shadow(10px 11px 15px rgba(76, 87, 125, 0.15));
+}
+
+.vendas h3{
+    color: var(--darkverde);
+}
+.ficon{
+    font-size: 30px;
+}
+
+/* segunda seção ---------------------------------------------------------------- */
+
+.bigbox1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* carrinhos ativos -------------------------------------------------------------- */
+
+
+.ativos{
+    display: block;
+    background-color: white;
+}
+
+.ativos div{
+    padding: 8px;
+}
+
+.atvicons{
+    display: flex;
+    margin: 6px;
+    gap: 5px;
+}
+
+.icon{
+    padding: 12px;
+    border: dashed 1px var(--lightcinza);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.moda{
+    border-bottom: solid 2px var(--azul) ;
+}
+
