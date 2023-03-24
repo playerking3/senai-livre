@@ -91,7 +91,7 @@
 .controle{
     display: grid;
     grid-template-rows: auto;
-    margin: 28px;
+    margin: 22px;
 }
 
 .textos{
@@ -135,6 +135,8 @@
 .bigbox1{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 22px;
+    margin: 22px;
 }
 
 /* carrinhos ativos -------------------------------------------------------------- */
@@ -143,10 +145,12 @@
 .ativos{
     display: block;
     background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(82, 63, 105, 0.05);
 }
 
 .ativos div{
-    padding: 8px;
+    padding: 12px;
 }
 
 .atvicons{
@@ -165,7 +169,65 @@
     align-items: center;
 }
 
-.moda{
+.icon i{
+    color: var(--cinza);
+}
+
+.icon:hover{
     border-bottom: solid 2px var(--azul) ;
 }
 
+.tabela1{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela1 th{
+    color: var(--cinza);
+}
+
+.tabela1 tr{
+    border-bottom: dashed 1px var(--lightcinza);
+}
+
+/* area de novidade ------------------------------------------------------------------------------- */
+
+.novidades{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(82, 63, 105, 0.05);
+}
+
+.novidades p{
+    color: var(--darkcinza);
+    padding: 8px;
+}
+
+.novbotao{
+    margin: 22px;
+}
+
+.btnazul{
+    padding: 8px;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.btn2{
+    padding: 8px;
+    background-color: #5c5c5c20;
+    border: none;
+    border-radius: 12px;
+    color: var(--cinza);
+    cursor: pointer;
+}
